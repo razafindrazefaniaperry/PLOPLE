@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLOPLE CONCEPT - Agence Créative & Communication Digitale</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#C0FF00',
+                        secondary: '#000000'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+        
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .font-montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%), 
+                        url('TechnoGcam Official_20250518_143439_perry.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .typing-animation {
+            border-right: 2px solid #C0FF00;
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #C0FF00 }
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .parallax-bg {
+            background: linear-gradient(45deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #000000 0%, #374151 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-fixed {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="font-montserrat smooth-scroll">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 nav-fixed border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="font-poppins font-bold text-2xl text-secondary">
+                    PLOPLE CONCEPT
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#accueil" class="text-gray-700 hover:text-secondary transition-colors">Accueil</a>
+                    <a href="#apropos" class="text-gray-700 hover:text-secondary transition-colors">À propos</a>
+                    <a href="#services" class="text-gray-700 hover:text-secondary transition-colors">Services</a>
+                    <a href="#realisations" class="text-gray-700 hover:text-secondary transition-colors">Réalisations</a>
+                    <a href="#blog" class="text-gray-700 hover:text-secondary transition-colors">Blog</a>
+                    <a href="#contact" class="text-gray-700 hover:text-secondary transition-colors">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <div class="hidden md:flex items-center space-x-2">
+                        <button class="text-sm text-gray-600 hover:text-secondary">FR</button>
+                        <span class="text-gray-300">|</span>
+                        <button class="text-sm text-gray-600 hover:text-secondary">EN</button>
+                    </div>
+                    <button class="bg-primary text-secondary px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">
+                        Demander un devis
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="min-h-screen hero-bg flex items-center justify-center relative">
+        <div class="text-center text-white z-10 max-w-4xl mx-auto px-6">
+            <h1 class="font-poppins font-bold text-5xl md:text-7xl mb-6 leading-tight">
+                Aider les marques à se 
+                <span class="text-primary">raconter autrement</span>
+            </h1>
+            <div class="text-xl md:text-2xl mb-8 font-light typing-animation overflow-hidden whitespace-nowrap inline-block">
+                Avec audace, créativité et impact
+            </div>
+            <p class="text-lg mb-12 max-w-2xl mx-auto opacity-90">
+                Agence créative spécialisée en communication digitale, création de contenu et organisation d'événements pour entreprises, artistes et startups.
+            </p>
+            <button class="bg-primary text-secondary px-8 py-4 !rounded-button font-semibold text-lg hover:bg-opacity-90 transition-all whitespace-nowrap">
+                Découvrir nos services
+            </button>
+        </div>
+        
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div class="w-6 h-6 flex items-center justify-center">
+                <i class="ri-arrow-down-line text-white text-2xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-poppins font-bold text-4xl md:text-5xl mb-6 gradient-text">
+                    Nos Services
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Des solutions créatives sur mesure pour donner vie à vos projets et amplifier votre impact digital
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover bg-white p-8 rounded-2xl border border-gray-100 shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-green-300 rounded-xl flex items-center justify-center mb-6">
+                        <i class="ri-smartphone-line text-2xl text-secondary"></i>
+                    </div>
+                    <h3 class="font-poppins font-semibold text-xl mb-4">Communication Digitale</h3>
+                    <p class="text-gray-600 mb-6">Stratégies digitales innovantes pour maximiser votre présence en ligne et engager votre audience.</p>
+                    <button class="text-primary font-medium hover:underline">En savoir plus →</button>
+                </div>
+                
+                <div class="card-hover bg-white p-8 rounded-2xl border border-gray-100 shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-300 rounded-xl flex items-center justify-center mb-6">
+                        <i class="ri-video-line text-2xl text-white"></i>
+                    </div>
+                    <h3 class="font-poppins font-semibold text-xl mb-4">Création de Contenu</h3>
+                    <p class="text-gray-600 mb-6">Contenus visuels et vidéos percutants qui racontent votre histoire de manière authentique.</p>
+                    <button class="text-primary font-medium hover:underline">En savoir plus →</button>
+                </div>
+                
+                <div class="card-hover bg-white p-8 rounded-2xl border border-gray-100 shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-300 rounded-xl flex items-center justify-center mb-6">
+                        <i class="ri-share-line text-2xl text-white"></i>
+                    </div>
+                    <h3 class="font-poppins font-semibold text-xl mb-4">Réseaux Sociaux</h3>
+                    <p class="text-gray-600 mb-6">Gestion complète de vos réseaux sociaux pour créer une communauté engagée et fidèle.</p>
+                    <button class="text-primary font-medium hover:underline">En savoir plus →</button>
+                </div>
+                
+                <div class="card-hover bg-white p-8 rounded-2xl border border-gray-100 shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-300 rounded-xl flex items-center justify-center mb-6">
+                        <i class="ri-calendar-event-line text-2xl text-white"></i>
+                    </div>
+                    <h3 class="font-poppins font-semibold text-xl mb-4">Événements</h3>
+                    <p class="text-gray-600 mb-6">Organisation d'événements mémorables qui marquent les esprits et renforcent votre image.</p>
+                    <button class="text-primary font-medium hover:underline">En savoir plus →</button>
+                </div>
+                
+                <div class="card-hover bg-white p-8 rounded-2xl border border-gray-100 shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-400 to-purple-300 rounded-xl flex items-center justify-center mb-6">
+                        <i class="ri-palette-line text-2xl text-white"></i>
+                    </div>
+                    <h3 class="font-poppins font-semibold text-xl mb-4">Branding</h3>
+                    <p class="text-gray-600 mb-6">Création d'identités de marque fortes et cohérentes qui reflètent vos valeurs et votre vision.</p>
+                    <button class="text-primary font-medium hover:underline">En savoir plus →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- À Propos Section -->
+    <section id="apropos" class="py-20 parallax-bg">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="font-poppins font-bold text-4xl md:text-5xl mb-6 gradient-text">
+                        À Propos de Nous
+                    </h2>
+                    <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+                        Chez PLOPLE CONCEPT, nous croyons que chaque marque a une histoire unique à raconter. 
+                        Notre mission est de vous aider à la révéler avec audace, créativité et impact.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="ri-check-line text-secondary text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Créativité Sans Limites</h4>
+                                <p class="text-gray-600">Nous repoussons les frontières de la créativité pour créer des expériences uniques.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="ri-check-line text-secondary text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Approche Personnalisée</h4>
+                                <p class="text-gray-600">Chaque projet est unique, c'est pourquoi nous adaptons notre approche à vos besoins spécifiques.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="ri-check-line text-secondary text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Résultats Mesurables</h4>
+                                <p class="text-gray-600">Nous nous engageons à livrer des résultats concrets qui font la différence.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="TechnoGcam Official_20241028_103524_perry.jpg" 
+                         alt="Équipe PLOPLE CONCEPT" 
+                         class="rounded-2xl shadow-2xl object-cover w-full h-96 lg:h-[500px]">
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center space-x-4">
+                            <div class="text-3xl font-bold text-primary">150+</div>
+                            <div class="text-sm text-gray-600">Projets<br>Réalisés</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-20 text-center">
+                <blockquote class="font-poppins text-2xl md:text-3xl font-light text-gray-700 max-w-4xl mx-auto">
+                    "La créativité, c'est l'intelligence qui s'amuse. Chez PLOPLE CONCEPT, nous transformons cette philosophie en résultats concrets pour nos clients."
+                </blockquote>
+                <div class="mt-6 text-gray-500">— L'équipe PLOPLE CONCEPT</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="realisations" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-poppins font-bold text-4xl md:text-5xl mb-6 gradient-text">
+                    Nos Réalisations
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Découvrez comment nous avons aidé nos clients à transformer leur vision en succès concrets
+                </p>
+            </div>
+            
+            <div class="flex justify-center mb-12">
+                <div class="flex space-x-4 bg-gray-100 p-1 rounded-full">
+                    <button class="px-6 py-2 rounded-full bg-primary text-secondary font-medium">Tous</button>
+                    <button class="px-6 py-2 rounded-full text-gray-600 hover:bg-white transition-colors">Digital</button>
+                    <button class="px-6 py-2 rounded-full text-gray-600 hover:bg-white transition-colors">Événements</button>
+                    <button class="px-6 py-2 rounded-full text-gray-600 hover:bg-white transition-colors">Contenu</button>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl">
+                        <img src="TechnoGcam Official_20250519_205645_perry.jpg" 
+                             alt="Campagne Mode Luxe" 
+                             class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h4 class="font-semibold text-xl mb-2">Campagne Mode Luxe</h4>
+                                <p class="text-sm">Branding & Communication</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl">
+                        <img src="TechnoGcam Official_20241101_230405_perry.jpg" 
+                             alt="Lancement Startup Tech" 
+                             class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h4 class="font-semibold text-xl mb-2">Lancement événement</h4>
+                                <p class="text-sm">Événement & Digital</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl">
+                        <img src="TechnoGcam Official_20250424_110851_perry.jpg" 
+                             alt="Identité Restaurant" 
+                             class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h4 class="font-semibold text-xl mb-2"> Lancement Busness</h4>
+                                <p class="text-sm">Branding & Contenu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl">
+                        <img src="TechnoGcam Official_20241031_092225_perry.PORTRAIT.jpg" 
+                             alt="Promotion Artiste Musical" 
+                             class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h4 class="font-semibold text-xl mb-2">Photographie</h4>
+                                <p class="text-sm">Communication & Événement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl">
+                        <img src="Free T-Shirt & Tag Mockup.png" 
+                             alt="Marque Bien-être" 
+                             class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h4 class="font-semibold text-xl mb-2">Marque Bien-être</h4>
+                                <p class="text-sm">Branding & Réseaux Sociaux</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl">
+                        <img src="65968.png" 
+                             alt="Conférence Corporate" 
+                             class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h4 class="font-semibold text-xl mb-2">Conférence Corporate</h4>
+                                <p class="text-sm">Événement & Digital</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages Section -->
+    <section class="py-20 parallax-bg">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-poppins font-bold text-4xl md:text-5xl mb-6 gradient-text">
+                    Ce Que Disent Nos Clients
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Leurs succès sont notre plus belle récompense
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-yellow-400">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-700 mb-6 italic">
+                        "PLOPLE CONCEPT a complètement transformé notre présence digitale. Leur créativité et leur professionnalisme nous ont permis d'atteindre nos objectifs au-delà de nos espérances."
+                    </blockquote>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center mr-4">
+                            <i class="ri-user-line text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <div class="font-semibold">Santatra Jean</div>
+                            <div class="text-sm text-gray-500">Directreur Marketing, plopleconcept</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-yellow-400">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-700 mb-6 italic">
+                        "L'organisation de notre événement de lancement a été parfaite. L'équipe a su capturer l'essence de notre marque et créer une expérience mémorable pour tous nos invités."
+                    </blockquote>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center mr-4">
+                            <i class="ri-user-line text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <div class="font-semibold">Welrick Joslin</div>
+                            <div class="text-sm text-gray-500">Fondateur, plopleconcept</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-yellow-400">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-700 mb-6 italic">
+                        "Grâce à leur expertise en création de contenu, notre engagement sur les réseaux sociaux a augmenté de 300 %. Une équipe exceptionnelle !"
+                    </blockquote>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-pink-400 to-red-500 rounded-full flex items-center justify-center mr-4">
+                            <i class="ri-user-line text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <div class="font-semibold">Razafindrazefania Perry</div>
+                            <div class="text-sm text-gray-500">Artiste & Influenceur</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-poppins font-bold text-4xl md:text-5xl mb-6 gradient-text">
+                    Blog & Inspirations
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Découvrez nos dernières réflexions sur les tendances créatives et digitales
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <article class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl mb-6">
+                        <img src="https://readdy.ai/api/search-image?query=digital%20marketing%20trends%202024%2C%20modern%20smartphone%20with%20social%20media%20icons%2C%20digital%20analytics%20dashboard%2C%20colorful%20data%20visualization%2C%20contemporary%20marketing%20tools%2C%20tech%20innovation%20concept&width=400&height=250&seq=blog001&orientation=landscape" 
+                             alt="Tendances Digital 2024" 
+                             class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="flex items-center space-x-2 mb-3">
+                        <span class="bg-primary text-secondary px-3 py-1 rounded-full text-sm font-medium">Digital</span>
+                        <span class="text-gray-500 text-sm">15 Mars 2024</span>
+                    </div>
+                    <h3 class="font-poppins font-semibold text-xl mb-3 group-hover:text-primary transition-colors">
+                        Les Tendances du Marketing Digital en 2024
+                    </h3>
+                    <p class="text-gray-600 mb-4">
+                        Découvrez les stratégies innovantes qui façonnent l'avenir de la communication digitale et comment les intégrer dans votre approche marketing.
+                    </p>
+                    <button class="text-primary font-medium hover:underline">Lire la suite →</button>
+                </article>
+                
+                <article class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl mb-6">
+                        <img src="Gray Cap Logo Mockup.png" 
+                             alt="Création de Contenu" 
+                             class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="flex items-center space-x-2 mb-3">
+                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">Créativité</span>
+                        <span class="text-gray-500 text-sm">12 Mars 2024</span>
+                    </div>
+                    <h3 class="font-poppins font-semibold text-xl mb-3 group-hover:text-primary transition-colors">
+                        Comment Créer du Contenu qui Marque les Esprits
+                    </h3>
+                    <p class="text-gray-600 mb-4">
+                        Les secrets pour développer une stratégie de contenu authentique qui résonne avec votre audience et génère un engagement durable.
+                    </p>
+                    <button class="text-primary font-medium hover:underline">Lire la suite →</button>
+                </article>
+                
+                <article class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl mb-6">
+                        <img src="mug.png" 
+                             alt="Organisation Événements" 
+                             class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="flex items-center space-x-2 mb-3">
+                        <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">Événements</span>
+                        <span class="text-gray-500 text-sm">10 Mars 2024</span>
+                    </div>
+                    <h3 class="font-poppins font-semibold text-xl mb-3 group-hover:text-primary transition-colors">
+                        Organiser un Événement Mémorable : Notre Guide Complet
+                    </h3>
+                    <p class="text-gray-600 mb-4">
+                        De la conception à la réalisation, découvrez notre méthodologie éprouvée pour créer des événements qui marquent durablement votre audience.
+                    </p>
+                    <button class="text-primary font-medium hover:underline">Lire la suite →</button>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 parallax-bg">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-poppins font-bold text-4xl md:text-5xl mb-6 gradient-text">
+                    Parlons de Votre Projet
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Prêt à donner vie à vos idées ? Contactez-nous pour une consultation gratuite
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Prénom</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors" placeholder="Votre prénom">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Nom</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors" placeholder="Votre nom">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors" placeholder="votre@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Entreprise</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors" placeholder="Nom de votre entreprise">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Type de projet</label>
+                            <div class="relative">
+                                <button type="button" class="w-full px-4 py-3 border border-gray-300 rounded-lg text-left focus:ring-2 focus:ring-primary focus:border-transparent transition-colors flex items-center justify-between">
+                                    <span class="text-gray-500">Sélectionnez un service</span>
+                                    <i class="ri-arrow-down-s-line text-gray-400"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors resize-none" placeholder="Décrivez-nous votre projet..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-secondary py-3 px-6 !rounded-button font-semibold hover:bg-opacity-90 transition-all whitespace-nowrap">
+                            Envoyer le Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="font-poppins font-semibold text-2xl mb-6">Informations de Contact</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i class="ri-mail-line text-secondary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Email</h4>
+                                    <p class="text-gray-600">plopleconcept@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i class="ri-phone-line text-secondary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Téléphone</h4>
+                                    <p class="text-gray-600">+261 34 11 838 00</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i class="ri-map-pin-line text-secondary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Adresse</h4>
+                                    <p class="text-gray-600">FIANARANTSOA<br>ANDRAINJATO</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold mb-4">Suivez-nous</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center hover:bg-primary hover:text-secondary transition-colors">
+                                <i class="ri-instagram-line text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center hover:bg-primary hover:text-secondary transition-colors">
+                                <i class="ri-linkedin-line text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center hover:bg-primary hover:text-secondary transition-colors">
+                                <i class="ri-twitter-line text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center hover:bg-primary hover:text-secondary transition-colors">
+                                <i class="ri-facebook-line text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-2xl shadow-lg">
+                        <h4 class="font-semibold mb-4">Consultation Gratuite</h4>
+                        <p class="text-gray-600 mb-4">Réservez un appel de 30 minutes pour discuter de votre projet sans engagement.</p>
+                        <button class="bg-secondary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">
+                            Réserver un Appel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="font-poppins font-bold text-2xl mb-6">PLOPLE CONCEPT</div>
+                    <p class="text-gray-300 mb-6">
+                        Agence créative spécialisée en communication digitale, création de contenu et organisation d'événements.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-primary hover:text-secondary transition-colors">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-primary hover:text-secondary transition-colors">
+                            <i class="ri-linkedin-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-primary hover:text-secondary transition-colors">
+                            <i class="ri-twitter-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-primary hover:text-secondary transition-colors">
+                            <i class="ri-facebook-line"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Communication Digitale</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Création de Contenu</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Réseaux Sociaux</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Événements</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Branding</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-6">Liens Rapides</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">À Propos</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Portfolio</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Contact</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Mentions Légales</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-6">Newsletter</h4>
+                    <p class="text-gray-300 mb-4">Restez informé de nos dernières créations et conseils.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Votre email" class="flex-1 px-4 py-3 bg-gray-700 border-none rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <button class="bg-primary text-secondary px-6 py-3 rounded-r-lg hover:bg-opacity-90 transition-all">
+                            <i class="ri-send-plane-line"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 PLOPLE CONCEPT. Tous droits réservés. Créé avec passion à Paris.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script id="navigation-scroll">
+        document.addEventListener('DOMContentLoaded', function() {
+            const nav = document.querySelector('nav');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    nav.classList.add('shadow-lg');
+                } else {
+                    nav.classList.remove('shadow-lg');
+                }
+            });
+        });
+    </script>
+
+    <script id="smooth-scrolling">
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        const offsetTop = targetSection.offsetTop - 80;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script id="portfolio-filter">
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.flex.space-x-4 button');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('bg-primary', 'text-secondary');
+                        btn.classList.add('text-gray-600');
+                    });
+                    
+                    this.classList.add('bg-primary', 'text-secondary');
+                    this.classList.remove('text-gray-600');
+                });
+            });
+        });
+    </script>
+
+    <script id="form-interactions">
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputs = document.querySelectorAll('input, textarea');
+            
+            inputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.parentElement.querySelector('label')?.classList.add('text-primary');
+                });
+                
+                input.addEventListener('blur', function() {
+                    this.parentElement.querySelector('label')?.classList.remove('text-primary');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
